@@ -1,5 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
+import { About } from "@/components/sections/About";
 import { Hero } from "@/components/sections/Hero";
+import { Projects } from "@/components/sections/Projects";
+import { Stack } from "@/components/sections/Stack";
 
 export default function Home() {
   return (
@@ -7,6 +10,9 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <About />
+        <Stack />
+        <Projects />
       </main>
     </>
   );
