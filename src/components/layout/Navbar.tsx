@@ -22,16 +22,16 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-background/70 border-b border-border/40">
       <nav className="container mx-auto px-6 h-16 flex items-center justify-between">
-            {/* Logo */}
+        {/* Logo */}
         <Link
-        href="/"
-        aria-label="Douglas Salazar - Home"
-        className="flex h-10 w-10 items-center justify-center rounded-md border border-primary/40 bg-primary/5 hover:bg-primary/10 hover:border-primary transition-all group"
+          href="/"
+          aria-label="Douglas Salazar - Home"
+          className="flex h-10 w-10 items-center justify-center rounded-md border border-primary/40 bg-primary/5 hover:bg-primary/10 hover:border-primary transition-all group"
         >
-        <span className="font-serif font-bold text-xl tracking-wider group-hover:scale-110 transition-transform">
+          <span className="font-serif font-bold text-xl tracking-wider group-hover:scale-110 transition-transform">
             <span className="text-foreground">D</span>
             <span className="text-primary">S</span>
-        </span>
+          </span>
         </Link>
 
         {/* Links centrais */}

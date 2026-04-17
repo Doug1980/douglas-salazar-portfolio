@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 import {
@@ -8,6 +7,7 @@ import {
   LinkedinIcon,
   MailIcon,
 } from "@/components/shared/SocialIcons";
+import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
@@ -34,7 +34,6 @@ export function Hero() {
             <p className="text-lg text-muted-foreground">Olá, eu sou</p>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               Douglas
-             
               <span className="text-primary"> Salazar</span>
             </h1>
           </div>
