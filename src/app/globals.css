@@ -122,7 +122,13 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
+    background:
+      radial-gradient(circle at 20% 15%, oklch(0.35 0.22 265 / 0.35) 0%, transparent 55%),
+      radial-gradient(circle at 80% 85%, oklch(0.4 0.25 290 / 0.3) 0%, transparent 55%),
+      radial-gradient(circle at 50% 50%, oklch(0.25 0.15 260 / 0.15) 0%, transparent 70%),
+      linear-gradient(135deg, oklch(0.08 0 0) 0%, oklch(0.12 0.05 265) 50%, oklch(0.08 0 0) 100%);
+    background-attachment: fixed;
   }
   html {
     @apply font-sans;

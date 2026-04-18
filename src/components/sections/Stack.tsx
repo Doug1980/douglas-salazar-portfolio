@@ -112,7 +112,7 @@ export function Stack() {
                     return (
                       <div
                         key={tech.name}
-                        className="group flex flex-col items-center justify-center gap-2 rounded-lg border border-border/40 bg-gradient-to-br from-background via-card/60 to-background/80 p-3 hover:border-primary/50 hover:from-primary/5 hover:via-card hover:to-primary/5 hover:scale-105 transition-all shadow-md"
+                        className="group flex flex-col items-center justify-center gap-2 rounded-lg border border-border/40 bg-gradient-to-br from-background via-card/60 to-background/80 p-3 hover:border-primary/50 hover:from-primary/5 hover:via-card hover:to-primary/5 hover:scale-105 transition-all shadow-[0_0_20px_rgba(99,102,241,0.15)] hover:shadow-[0_0_30px_rgba(99,102,241,0.35)]"
                       >
                         <TechIcon
                           className="h-7 w-7 transition-transform group-hover:scale-110"
