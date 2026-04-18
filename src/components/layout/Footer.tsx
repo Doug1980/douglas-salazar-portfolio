@@ -4,6 +4,7 @@ import {
   GithubIcon,
   LinkedinIcon,
   MailIcon,
+  WhatsappIcon,
 } from "@/components/shared/SocialIcons";
 
 const EMAIL = "douglassalazar1980@gmail.com";
@@ -26,8 +27,14 @@ const SOCIAL_LINKS = [
   },
   {
     Icon: LinkedinIcon,
-    href: "https://www.linkedin.com/in/douglassalazar80",
+    href: "https://www.linkedin.com/in/douglas-salazar80/",
     label: "LinkedIn",
+    external: true,
+  },
+  {
+    Icon: WhatsappIcon,
+    href: WHATSAPP_HREF,
+    label: "WhatsApp",
     external: true,
   },
   {
@@ -54,13 +61,14 @@ export function Footer() {
           desafiadores. Escolha o canal que preferir.
         </p>
 
-        <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl mx-auto">
           {SOCIAL_LINKS.map((social) => {
             const Icon = social.Icon;
             return (
               <Link
                 key={social.label}
                 href={social.href}
+                aria-label={`Acessar ${social.label} de Douglas Salazar`}
                 target={social.external ? "_blank" : undefined}
                 rel={social.external ? "noopener noreferrer" : undefined}
                 className="group flex flex-col items-center gap-3 rounded-xl border border-border/40 bg-card/40 p-6 hover:border-primary/50 hover:bg-card/80 hover:-translate-y-1 transition-all"
@@ -142,7 +150,10 @@ export function Footer() {
           </div>
 
           <div className="mt-10 pt-6 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
-            <p>© 2026 Douglas Salazar. Todos os direitos reservados.</p>
+            <p>
+              © {new Date().getFullYear()} Douglas Salazar. Todos os direitos
+              reservados.
+            </p>
             <p className="italic">Construído com Next.js e TypeScript.</p>
           </div>
         </div>

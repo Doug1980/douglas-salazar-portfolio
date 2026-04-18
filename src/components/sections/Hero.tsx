@@ -84,7 +84,7 @@ export function Hero() {
               <GithubIcon className="h-5 w-5" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/douglassalazar80"
+              href="https://www.linkedin.com/in/douglas-salazar80/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

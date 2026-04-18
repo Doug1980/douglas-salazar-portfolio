@@ -57,7 +57,7 @@ export function About() {
                   key={stat.label}
                   className="rounded-lg border border-border/40 bg-card/40 p-4 text-center"
                 >
-                  <div className="font-serif text-2xl font-bold text-primary">
+                  <div className="text-2xl font-bold text-primary">
                     {stat.value}
                   </div>
                   <div className="text-xs text-muted-foreground mt-1 leading-tight">
