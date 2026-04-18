@@ -1,7 +1,55 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import type { IconType } from "react-icons";
+import {
+  SiCloudinary,
+  SiDocker,
+  SiExpress,
+  SiFastify,
+  SiFirebase,
+  SiJavascript,
+  SiJsonwebtokens,
+  SiMongodb,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiReact,
+  SiStripe,
+  SiTailwindcss,
+  SiTypescript,
+  SiZod,
+} from "react-icons/si";
 import { GithubIcon } from "@/components/shared/SocialIcons";
+
+type Tech = {
+  name: string;
+  Icon: IconType;
+  color: string;
+};
+
+const TECHS: Record<string, Tech> = {
+  React: { name: "React", Icon: SiReact, color: "#61DAFB" },
+  "Node.js": { name: "Node.js", Icon: SiNodedotjs, color: "#5FA04E" },
+  Express: { name: "Express", Icon: SiExpress, color: "#FFFFFF" },
+  PostgreSQL: { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
+  MongoDB: { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
+  Stripe: { name: "Stripe", Icon: SiStripe, color: "#635BFF" },
+  Cloudinary: { name: "Cloudinary", Icon: SiCloudinary, color: "#3448C5" },
+  JWT: { name: "JWT", Icon: SiJsonwebtokens, color: "#D63AFF" },
+  Docker: { name: "Docker", Icon: SiDocker, color: "#2496ED" },
+  JavaScript: { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
+  TypeScript: { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
+  "Tailwind CSS": {
+    name: "Tailwind CSS",
+    Icon: SiTailwindcss,
+    color: "#06B6D4",
+  },
+  Fastify: { name: "Fastify", Icon: SiFastify, color: "#FFFFFF" },
+  Prisma: { name: "Prisma", Icon: SiPrisma, color: "#2D3748" },
+  Firebase: { name: "Firebase", Icon: SiFirebase, color: "#FFCA28" },
+  Zod: { name: "Zod", Icon: SiZod, color: "#3E67B1" },
+};
 
 const PROJECTS = [
   {
@@ -82,7 +130,6 @@ export function Projects() {
               key={project.title}
               className="group relative rounded-2xl border border-border/40 bg-card/60 overflow-hidden hover:border-primary/50 transition-all shadow-lg hover:shadow-primary/10"
             >
-              {/* Header com título e ações */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-border/40 bg-background/40">
                 <h3 className="text-lg font-bold">{project.title}</h3>
                 <div className="flex items-center gap-2">
@@ -116,9 +163,7 @@ export function Projects() {
                 </div>
               </div>
 
-              {/* Corpo — Preview à esquerda + Info à direita */}
               <div className="grid md:grid-cols-5 gap-6 p-6">
-                {/* Preview da imagem */}
                 <div className="md:col-span-2">
                   <Link
                     href={project.demo}
@@ -135,9 +180,7 @@ export function Projects() {
                   </Link>
                 </div>
 
-                {/* Metadata */}
                 <div className="md:col-span-3 space-y-5">
-                  {/* Grid de infos estilo Vercel */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
                     <div>
                       <div className="text-muted-foreground mb-1">Ano</div>
@@ -169,7 +212,6 @@ export function Projects() {
                     </div>
                   </div>
 
-                  {/* Subtítulo + descrição */}
                   <div className="space-y-2">
                     <p className="text-primary text-sm font-semibold">
                       {project.subtitle}
@@ -179,16 +221,24 @@ export function Projects() {
                     </p>
                   </div>
 
-                  {/* Techs */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.techs.map((tech) => (
-                      <span
-                        key={tech}
-                        className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-background/60 border border-border/60 text-muted-foreground"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  <div className="flex flex-wrap gap-2">
+                    {project.techs.map((techName) => {
+                      const tech = TECHS[techName];
+                      if (!tech) return null;
+                      const TechIcon = tech.Icon;
+                      return (
+                        <div
+                          key={techName}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-background/60 border border-border/60 text-muted-foreground hover:border-primary/40 hover:text-foreground transition-colors"
+                        >
+                          <TechIcon
+                            className="h-3.5 w-3.5"
+                            style={{ color: tech.color }}
+                          />
+                          {techName}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
