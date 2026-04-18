@@ -3,7 +3,7 @@ import { GraduationCap, Mail, MapPin } from "lucide-react";
 const STATS = [
   { value: "16+", label: "Anos em tecnologia" },
   { value: "2", label: "Projetos em produção" },
-  { value: "3", label: "Idiomas no portfólio" },
+  { value: "5", label: "Certificados" },
 ];
 
 const EMAIL = "douglassalazar1980@gmail.com";

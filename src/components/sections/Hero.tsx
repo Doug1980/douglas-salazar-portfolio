@@ -7,6 +7,7 @@ import {
   GithubIcon,
   LinkedinIcon,
   MailIcon,
+  WhatsappIcon,
 } from "@/components/shared/SocialIcons";
 import { Button } from "@/components/ui/button";
 
@@ -83,6 +84,7 @@ export function Hero() {
             >
               <GithubIcon className="h-5 w-5" />
             </Link>
+
             <Link
               href="https://www.linkedin.com/in/douglas-salazar80/"
               target="_blank"
@@ -98,6 +100,15 @@ export function Hero() {
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <MailIcon className="h-5 w-5" />
+            </Link>
+            <Link
+              href="https://wa.me/5511985062356"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp de Douglas Salazar"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <WhatsappIcon className="h-5 w-5" />
             </Link>
           </div>
         </div>
