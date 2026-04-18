@@ -14,7 +14,8 @@ type Certification = {
   completionDate: string;
   description: string;
   technologies: string[];
-  verifyUrl: string;
+  verifyUrl?: string;
+  status?: "pending_mec";
   featured?: boolean;
 };
 
