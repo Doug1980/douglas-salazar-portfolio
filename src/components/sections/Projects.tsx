@@ -67,7 +67,7 @@ export function Projects() {
     >
       <div className="container mx-auto max-w-6xl">
         <div className="mb-16 space-y-3 text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Projetos em <span className="text-primary">Destaque</span>
           </h2>
           <div className="h-1 w-16 bg-primary rounded-full mx-auto" />
@@ -84,9 +84,7 @@ export function Projects() {
             >
               {/* Header com título e ações */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-border/40 bg-background/40">
-                <h3 className="font-serif text-lg font-bold">
-                  {project.title}
-                </h3>
+                <h3 className="text-lg font-bold">{project.title}</h3>
                 <div className="flex items-center gap-2">
                   <Link
                     href={project.frontend}

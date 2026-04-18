@@ -13,7 +13,6 @@ const NAV_LINKS = [
 const LANGUAGES = [
   { code: "pt", label: "PT" },
   { code: "en", label: "EN" },
-  { code: "es", label: "ES" },
 ];
 
 export function Navbar() {
@@ -28,7 +27,7 @@ export function Navbar() {
           aria-label="Douglas Salazar - Home"
           className="flex h-14 w-20 items-center justify-center rounded-md border border-primary/40 bg-primary/5 hover:bg-primary/10 hover:border-primary transition-all group"
         >
-          <span className="font-serif font-bold text-4xl tracking-wider group-hover:scale-110 transition-transform">
+          <span className="font-bold text-4xl tracking-wider group-hover:scale-110 transition-transform">
             <span className="text-foreground">D</span>
             <span className="text-primary">S</span>
           </span>

@@ -81,7 +81,7 @@ export function Stack() {
     >
       <div className="container mx-auto max-w-6xl">
         <div className="mb-16 space-y-3 text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Stack <span className="text-primary">Técnica</span>
           </h2>
           <div className="h-1 w-16 bg-primary rounded-full mx-auto" />
@@ -103,9 +103,7 @@ export function Stack() {
                   <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 border border-primary/30">
                     <GroupIcon className="h-4 w-4 text-primary" />
                   </div>
-                  <h3 className="font-serif text-xl font-bold">
-                    {group.title}
-                  </h3>
+                  <h3 className="text-xl font-bold">{group.title}</h3>
                 </div>
 
                 <div className="grid grid-cols-3 gap-3">
