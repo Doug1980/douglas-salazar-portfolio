@@ -11,6 +11,23 @@ import {
 } from "@/components/shared/SocialIcons";
 import { Button } from "@/components/ui/button";
 
+// Componente reutilizável da foto (usado em 2 lugares: mobile e desktop)
+function HeroPhoto() {
+  return (
+    <div className="relative aspect-[3/4] w-full max-w-xs mx-auto rounded-2xl overflow-hidden border-4 border-primary/50 bg-card shadow-2xl ring-4 ring-primary/10 ring-offset-4 ring-offset-background">
+      <Image
+        src="/douglas.jpg"
+        alt="Douglas Salazar"
+        fill
+        className="object-cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 ring-1 ring-inset ring-primary/40 rounded-2xl pointer-events-none" />
+    </div>
+  );
+}
+
 export function Hero() {
   return (
     <section
@@ -18,19 +35,9 @@ export function Hero() {
       className="relative min-h-screen flex items-center pt-20 pb-16 px-6"
     >
       <div className="container mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
-        {/* Coluna esquerda — Foto */}
+        {/* Coluna esquerda — Foto (APENAS desktop lg+) */}
         <div className="hidden lg:flex justify-center items-center order-2 lg:order-1">
-          <div className="relative aspect-[3/4] w-full max-w-xs mx-auto rounded-2xl overflow-hidden border-4 border-primary/50 bg-card shadow-2xl ring-4 ring-primary/10 ring-offset-4 ring-offset-background">
-            <Image
-              src="/douglas.jpg"
-              alt="Douglas Salazar"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute inset-0 ring-1 ring-inset ring-primary/40 rounded-2xl pointer-events-none" />
-          </div>
+          <HeroPhoto />
         </div>
 
         {/* Coluna direita — Texto */}
@@ -50,6 +57,13 @@ export function Hero() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               Douglas <span className="text-primary">Salazar</span>
             </h1>
+          </div>
+
+          {/* Foto MOBILE/TABLET (entre H1 e H2 - APENAS < lg) */}
+          <div className="flex lg:hidden justify-center py-4">
+            <div className="w-full max-w-xs">
+              <HeroPhoto />
+            </div>
           </div>
 
           <h2 className="text-xl md:text-3xl text-muted-foreground font-light">
