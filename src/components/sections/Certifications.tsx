@@ -37,7 +37,7 @@ const CERTIFICATIONS: Certification[] = [
       "Node.js",
       "Git",
     ],
-    status: "pending_mec",
+    verifyUrl: "/certificates/devclub-fullstack-pro.png",
     featured: true,
   },
   {
