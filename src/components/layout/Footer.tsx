@@ -47,10 +47,8 @@ const SOCIAL_LINKS = [
 
 export function Footer() {
   return (
-    <footer
-      id="contato"
-      className="relative border-t border-border/40 bg-gradient-to-b from-background via-card/40 to-background"
-    >
+    <footer id="contato" className="relative border-t border-border/40">
+      {/* SEÇÃO 1: CTA "Vamos conversar?" */}
       <div className="container mx-auto max-w-4xl px-6 py-20 text-center">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
           Vamos <span className="text-primary">conversar?</span>
@@ -58,7 +56,7 @@ export function Footer() {
         <div className="h-1 w-16 bg-primary rounded-full mx-auto mb-6" />
         <p className="text-muted-foreground max-w-xl mx-auto mb-10">
           Aberto a oportunidades full stack, colaborações e novos projetos
-          desafiadores. Escolha o canal que preferir.
+          desafiadores. Por favor, entre em contato nos canais abaixo.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl mx-auto">
@@ -83,6 +81,7 @@ export function Footer() {
         </div>
       </div>
 
+      {/* SEÇÃO 2: 3 Colunas (DS Logo / Contato / Navegação) */}
       <div className="border-t border-border/40">
         <div className="container mx-auto max-w-6xl px-6 py-10">
           <div className="grid md:grid-cols-3 gap-8">
@@ -148,8 +147,13 @@ export function Footer() {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div className="mt-10 pt-6 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
+      {/* SEÇÃO 3: Faixa final do copyright — largura total com bg-background */}
+      <div className="bg-background border-t border-border/40">
+        <div className="container mx-auto max-w-6xl px-6 py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
             <p>
               © {new Date().getFullYear()} Douglas Salazar. Todos os direitos
               reservados.
