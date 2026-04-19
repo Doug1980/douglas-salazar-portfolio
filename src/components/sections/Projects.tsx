@@ -28,6 +28,23 @@ type Tech = {
   color: string;
 };
 
+type Project = {
+  title: string;
+  preview: string;
+  subtitle: string[];
+  description: string;
+  meta: {
+    year: string;
+    status: string;
+    type: string;
+    env: string;
+  };
+  techs: string[];
+  demo: string;
+  frontend: string;
+  backend: string;
+};
+
 const TECHS: Record<string, Tech> = {
   React: { name: "React", Icon: SiReact, color: "#61DAFB" },
   "Node.js": { name: "Node.js", Icon: SiNodedotjs, color: "#5FA04E" },
@@ -51,11 +68,14 @@ const TECHS: Record<string, Tech> = {
   Zod: { name: "Zod", Icon: SiZod, color: "#3E67B1" },
 };
 
-const PROJECTS = [
+const PROJECTS: Project[] = [
   {
     title: "DevBurger 2.0",
     preview: "/devburguer-preview.png",
-    subtitle: "E-commerce completo com pagamento real via Stripe",
+    subtitle: [
+      "E-commerce completo com pagamento real via Stripe",
+      "Gestão completa de acompanhamento de pedidos",
+    ],
     description:
       "Aplicação full-stack com autenticação JWT, upload de imagens via Cloudinary, pagamentos reais com Stripe, painel administrativo com auto-refresh e notificação em tempo real de novos pedidos. Persistência híbrida PostgreSQL + MongoDB Atlas.",
     meta: {
@@ -82,7 +102,10 @@ const PROJECTS = [
   {
     title: "DevBills Pro",
     preview: "/devbills-preview.png",
-    subtitle: "Controle financeiro pessoal com dashboards interativos",
+    subtitle: [
+      "Controle financeiro pessoal com dashboards interativos",
+      "Exportação de relatórios completos em PDF e Excel",
+    ],
     description:
       "Aplicação full-stack TypeScript para gestão de finanças pessoais. Backend em Fastify com Prisma + MongoDB, autenticação via Firebase Admin e validação com Zod. Frontend com dashboards interativos e UX moderna.",
     meta: {
@@ -213,9 +236,11 @@ export function Projects() {
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-primary text-sm font-semibold">
-                      {project.subtitle}
-                    </p>
+                    <div className="text-primary text-sm font-semibold space-y-1">
+                      {project.subtitle.map((line, i) => (
+                        <p key={i}>{line}</p>
+                      ))}
+                    </div>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       {project.description}
                     </p>
