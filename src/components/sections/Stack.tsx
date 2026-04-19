@@ -79,7 +79,7 @@ export function Stack() {
       id="stack"
       className="relative py-24 px-6 border-t border-border/40 bg-card/20"
     >
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-5xl">
         <div className="mb-16 space-y-3 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Stack <span className="text-primary">Técnica</span>

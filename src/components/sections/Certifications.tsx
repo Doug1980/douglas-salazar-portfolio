@@ -92,7 +92,7 @@ export function Certifications() {
       id="certificacoes"
       className="relative py-24 border-t border-border/40"
     >
-      <div className="container mx-auto max-w-6xl px-6">
+      <div className="container mx-auto max-w-5xl px-6">
         {/* Cabeçalho da seção */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 mb-6">
@@ -113,7 +113,7 @@ export function Certifications() {
         </div>
 
         {/* Grid de certificações */}
-        <div className="grid gap-6 max-w-6xl mx-auto">
+        <div className="grid gap-6 max-w-5xl mx-auto">
           {CERTIFICATIONS.map((cert) => (
             <article
               key={cert.title}

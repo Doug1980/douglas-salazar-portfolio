@@ -113,7 +113,7 @@ export function Projects() {
       id="projetos"
       className="relative py-24 px-6 border-t border-border/40"
     >
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-5xl">
         <div className="mb-16 space-y-3 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Projetos em <span className="text-primary">Destaque</span>

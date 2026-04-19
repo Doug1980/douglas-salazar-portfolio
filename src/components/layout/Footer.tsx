@@ -59,7 +59,7 @@ export function Footer() {
           desafiadores. Por favor, entre em contato nos canais abaixo.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {SOCIAL_LINKS.map((social) => {
             const Icon = social.Icon;
             return (
@@ -83,7 +83,7 @@ export function Footer() {
 
       {/* SEÇÃO 2: 3 Colunas (DS Logo / Contato / Navegação) */}
       <div className="border-t border-border/40">
-        <div className="container mx-auto max-w-6xl px-6 py-10">
+        <div className="container mx-auto max-w-5xl px-6 py-10">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-3">
               <div className="flex items-center gap-2">
@@ -152,7 +152,7 @@ export function Footer() {
 
       {/* SEÇÃO 3: Faixa final do copyright — largura total com bg-background */}
       <div className="bg-background border-t border-border/40">
-        <div className="container mx-auto max-w-6xl px-6 py-6">
+        <div className="container mx-auto max-w-5xl px-6 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
             <p>
               © {new Date().getFullYear()} Douglas Salazar. Todos os direitos

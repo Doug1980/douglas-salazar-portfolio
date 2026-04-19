@@ -17,7 +17,7 @@ export function Hero() {
       id="home"
       className="relative min-h-screen flex items-center pt-20 pb-16 px-6"
     >
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
         {/* Coluna esquerda — Foto */}
         <div className="hidden lg:flex justify-center items-center order-2 lg:order-1">
           <div className="relative aspect-[3/4] w-full max-w-xs mx-auto rounded-2xl overflow-hidden border-4 border-primary/50 bg-card shadow-2xl ring-4 ring-primary/10 ring-offset-4 ring-offset-background">

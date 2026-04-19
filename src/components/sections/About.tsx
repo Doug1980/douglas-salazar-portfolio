@@ -14,7 +14,7 @@ export function About() {
       id="sobre"
       className="relative py-24 px-6 border-t border-border/40"
     >
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-5xl">
         <div className="mb-16 space-y-3">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Sobre <span className="text-primary">mim</span>
